@@ -2,121 +2,57 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trường Tiểu học Hoàng Diệu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f1f1f1;
-    }
-    header {
-      background: #2e7d32;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #388e3c;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background: #2e7d32;
-    }
-    main {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-    }
-    section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-    }
-    footer {
-      background: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trường Tiểu học Hoàng Diệu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9ff;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .banner {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+        .slogan {
+            font-size: 20px;
+            font-style: italic;
+            text-align: center;
+            margin: 20px;
+            color: #004080;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <img src="logo.jpg" alt="Logo Trường Tiểu học Hoàng Diệu" style="max-height: 120px; margin-bottom: 10px;">
-    <h1>TRƯỜNG TIỂU HỌC HOÀNG DIỆU</h1>
-    <p>Thôn Bù Gia Phúc I, xã Phú Nghĩa, huyện Bù Gia Mập, tỉnh Bình Phước</p>
-  </header>
-
-  <nav>
-    <a href="#">Kế hoạch nhà trường</a>
-    <a href="#">Công khai giáo dục</a>
-    <a href="#">Quản lý văn bản</a>
-    <a href="#">Thi đua - Khen thưởng</a>
-    <a href="#">Quản lý nhân sự</a>
-    <a href="#">Cơ sở vật chất</a>
-    <a href="#">Website sử dụng</a>
-    <a href="#">Hoạt động</a>
-  </nav>
-
-  <main>
-    <section>
-      <h2>📌 Giới thiệu</h2>
-      <p>Trường Tiểu học Hoàng Diệu là nơi đào tạo, giáo dục thế hệ học sinh lớp 1 đến lớp 5, đặt tại vùng Bù Gia Phúc I, xã Phú Nghĩa, huyện Bù Gia Mập, tỉnh Bình Phước. Nhà trường luôn phấn đấu phát triển toàn diện học sinh, chú trọng kỹ năng sống và đạo đức.</p>
-    </section>
-
-    <section>
-      <h2>📢 Thông báo từ nhà trường</h2>
-      <div id="thong-bao-container">Đang tải dữ liệu...</div>
-    </section>
-
-    <section>
-      <h2>📷 Hoạt động tiêu biểu</h2>
-      <p>Sắp cập nhật thêm nội dung và hình ảnh hoạt động.</p>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Trường Tiểu học Hoàng Diệu. Thiết kế bởi nhóm CNTT nhà trường.
-  </footer>
-
-  <script>
-    const sheetID = '1mKW0tPL9FnXiQI6nYKJLpTbuj2Bg3ds4bcF4v6ddHY8';
-    const url = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
-
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        const entries = data.feed.entry;
-        let html = '<ul>';
-        entries.forEach(entry => {
-          const title = entry['gsx$tiêuđề']?.$t || 'Không có tiêu đề';
-          const content = entry['gsx$nộidung']?.$t || 'Không có nội dung';
-          const date = entry['gsx$ngàydăng']?.$t || 'Không rõ ngày';
-          html += `<li><strong>${title}</strong> (${date}): ${content}</li>`;
-        });
-        html += '</ul>';
-        document.getElementById('thong-bao-container').innerHTML = html;
-      })
-      .catch(err => {
-        document.getElementById('thong-bao-container').innerHTML = 'Không thể tải dữ liệu.';
-        console.error('Lỗi khi tải dữ liệu:', err);
-      });
-  </script>
-
+    <header>
+        <img src="logo.png" alt="Logo trường" class="logo"/>
+        <h1>Trường Tiểu học Hoàng Diệu</h1>
+        <p>Thôn Bù Gia Phúc I, xã Phú Nghĩa, huyện Bù Gia Mập, tỉnh Bình Phước</p>
+    </header>
+    <img src="banner_resized.jpg" alt="Hình trường" class="banner" />
+    <div class="slogan">"Học để biết, học để làm, học để chung sống, học để tự khẳng định mình"</div>
+    <footer>
+        &copy; 2025 Trường Tiểu học Hoàng Diệu. All rights reserved.
+    </footer>
 </body>
 </html>
