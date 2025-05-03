@@ -3,50 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trường Tiểu học Hoàng Diệu</title>
+  <title>Slideshow ảnh trường</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #e8f4fd; font-family: Arial, sans-serif; color: #222;">
-  
+<body>
 
-
-<!-- Slogan căn giữa -->
-
-<marquee behavior="scroll" direction="left" scrollamount="5" style="font-size: 1rem; color: #333; font-style: italic; margin: 10px 0;">
-  Học để biết – Học để làm – Học để cùng chung sống – Học để tự khẳng định mình
-</marquee>
-<div style="text-align: center; margin: 20px 0;">
-  <img src="hinh-truong.jpg" alt="Hình ảnh Trường Hoàng Diệu" style="max-width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-</div>
-
-
-
-  
-<header style="display: flex; align-items: center; gap: 16px; padding: 20px; background-color: #f9f9f9;">
-  <img src="logo.png" alt="Logo Trường Hoàng Diệu" style="height: 90px;">
-  <h1 style="font-size: 2rem; margin: 0; color: #004080;">TRƯỜNG TIỂU HỌC HOÀNG DIỆU</h1>
-</header>
-
-<div style="max-width: 1000px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px; border-radius: 8px;">
-<nav><img src="logo.png" alt="Logo Trường Hoàng Diệu" class="logo">
-    <a href="index.html">Trang chủ</a>
-    <a href="gioi-thieu.html">Giới thiệu</a>
-    <a href="tin-tuc.html">Tin tức</a>
-    <a href="hoat-dong.html">Hoạt động</a>
-    <a href="tai-nguyen.html">Tài nguyên</a>
-    <a href="lien-he.html">Liên hệ</a>
-  </nav>
-  <main class="container">
-    <section>
-      <h2>Chào mừng đến với Trường Tiểu học Hoàng Diệu</h2>
-      <p>Chúng tôi hướng tới một môi trường học tập thân thiện, sáng tạo và hội nhập quốc tế, giúp học sinh phát triển toàn diện về tri thức và nhân cách.</p>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Trường Tiểu học Hoàng Diệu. Thiết kế bởi Mèo Gỗ.</p>
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/1.jpg" alt="Ảnh 1">
     </div>
-  </footer>
-</div> <!-- end content wrapper -->
+    <div class="slide fade">
+      <img src="images/2.jpg" alt="Ảnh 2">
+    </div>
+    <div class="slide fade">
+      <img src="images/3.jpg" alt="Ảnh 3">
+    </div>
+    <div class="slide fade">
+      <img src="images/10.jpg" alt="Ảnh 4">
+    </div>
+    <div class="slide fade">
+      <img src="images/11.jpg" alt="Ảnh 5">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
