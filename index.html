@@ -3,50 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trường Tiểu học Hoàng Diệu</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Trang Chủ - Trường Tiểu học Hoàng Diệu</title>
+  <style>
+    /* --- Style chung --- */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; color: #333; }
+    header { background-color: #0066cc; color: #fff; padding: 20px; text-align: center; }
+    nav { background-color: #005bb5; padding: 10px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    main { max-width: 1000px; margin: 20px auto; padding: 0 20px; }
+    /* Đảm bảo khi điều hướng, section không bị trôi lên trên ảnh */
+    section { scroll-margin-top: 80px; }
+
+    /* --- Slideshow --- */
+    .slideshow-container { position: relative; max-width: 1000px; margin: 20px auto; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .slide { display: none; }
+    .slide img { width: 100%; height: auto; display: block; }
+    .prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: #fff; padding: 10px; border-radius: 50%; cursor: pointer; user-select: none; }
+    .prev { left: 10px; } .next { right: 10px; }
+    .fade { animation: fadeEffect 1s; }
+    @keyframes fadeEffect { from { opacity: .4; } to { opacity: 1; } }
+
+    /* --- Tin tức nổi bật --- */
+    #news { background-color: #fff; padding: 20px; margin-top: 40px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    #news h2 { margin-top: 0; color: #0066cc; }
+    #news img { max-width: 100%; height: auto; display: block; margin-bottom: 15px; border-radius: 5px; }
+    .excerpt { }
+    .more-content { display: none; }
+    .read-more { color: #0066cc; background: none; border: none; cursor: pointer; padding: 0; font-size: 1em; }
+
+    /* --- Thư viện ảnh --- */
+    #gallery { margin-top: 40px; }
+    #gallery h2 { color: #0066cc; margin-bottom: 10px; }
+    .gallery-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+    .gallery-container img { width: 100%; height: auto; border-radius: 5px; cursor: pointer; transition: opacity .3s; }
+    .gallery-container img:hover { opacity: .8; }
+  </style>
 </head>
-<body style="background-color: #e8f4fd; font-family: Arial, sans-serif; color: #222;">
-  
-
-
-<!-- Slogan căn giữa -->
-
-<marquee behavior="scroll" direction="left" scrollamount="5" style="font-size: 1rem; color: #333; font-style: italic; margin: 10px 0;">
-  Học để biết – Học để làm – Học để cùng chung sống – Học để tự khẳng định mình
-</marquee>
-<div style="text-align: center; margin: 20px 0;">
-  <img src="hinh-truong.jpg" alt="Hình ảnh Trường Hoàng Diệu" style="max-width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-</div>
-
-
-
-  
-<header style="display: flex; align-items: center; gap: 16px; padding: 20px; background-color: #f9f9f9;">
-  <img src="logo.png" alt="Logo Trường Hoàng Diệu" style="height: 90px;">
-  <h1 style="font-size: 2rem; margin: 0; color: #004080;">TRƯỜNG TIỂU HỌC HOÀNG DIỆU</h1>
-</header>
-
-<div style="max-width: 1000px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px; border-radius: 8px;">
-<nav><img src="logo.png" alt="Logo Trường Hoàng Diệu" class="logo">
-    <a href="index.html">Trang chủ</a>
-    <a href="gioi-thieu.html">Giới thiệu</a>
-    <a href="tin-tuc.html">Tin tức</a>
-    <a href="hoat-dong.html">Hoạt động</a>
-    <a href="tai-nguyen.html">Tài nguyên</a>
-    <a href="lien-he.html">Liên hệ</a>
+<body>
+  <header>
+    <h1>Trường Tiểu học Hoàng Diệu</h1>
+    <p>Chất lượng - Uy tín - Phát triển bền vững</p>
+  </header>
+  <nav>
+    <a href="#home">Trang Chủ</a>
+    <a href="#about">Giới Thiệu</a>
+    <a href="#news">Tin Tức</a>
+    <a href="#gallery">Thư Viện Ảnh</a>
+    <a href="#contact">Liên Hệ</a>
   </nav>
-  <main class="container">
-    <section>
-      <h2>Chào mừng đến với Trường Tiểu học Hoàng Diệu</h2>
-      <p>Chúng tôi hướng tới một môi trường học tập thân thiện, sáng tạo và hội nhập quốc tế, giúp học sinh phát triển toàn diện về tri thức và nhân cách.</p>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Trường Tiểu học Hoàng Diệu. Thiết kế bởi Mèo Gỗ.</p>
+  <main id="home">
+
+    <!-- Slideshow ảnh -->
+    <div class="slideshow-container">
+      <div class="slide fade"><img src="images/1.jpg" alt="Hoạt động học tập"></div>
+      <div class="slide fade"><img src="images/2.jpg" alt="Hoạt động ngoại khóa"></div>
+      <div class="slide fade"><img src="images/3.jpg" alt="Cơ sở vật chất"></div>
+      <div class="slide fade"><img src="images/10.jpg" alt="Sân trường"></div>
+      <div class="slide fade"><img src="images/11.jpg" alt="Thư viện"></div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
-  </footer>
-</div> <!-- end content wrapper -->
+
+    <!-- Tin tức nổi bật -->
+    <section id="news">
+      <h2>Tin Nổi Bật: Trường Tiểu học Hoàng Diệu đạt chuẩn quốc gia mức độ 1</h2>
+      <img src="images/news-hoang-dieu.jpg" alt="Trường Tiểu học Hoàng Diệu đạt chuẩn quốc gia">
+      <div class="excerpt">
+        <p>Ngày 14/3/2025, Trường Tiểu học Hoàng Diệu (xã Phú Nghĩa) long trọng tổ chức Lễ công bố quyết định công nhận trường đạt kiểm định chất lượng giáo dục cấp độ 2, trường đạt chuẩn quốc gia mức độ 1. Ông Tạ Hồng Quảng, Phó chủ tịch UBND huyện Bù Gia Mập tham dự buổi lễ.</p>
+      </div>
+      <div class="more-content">
+        <p>Sau 15 năm chia tách và đi vào hoạt động, trường Tiểu học Hoàng Diệu dần khắc phục khó khăn, vươn lên và đạt được nhiều thành tích trong sự nghiệp giáo dục và đào tạo. Đội ngũ cán bộ, giáo viên, nhân viên đảm bảo về số lượng, chất lượng với hơn 90% có trình độ đạt chuẩn đào tạo; cơ sở vật chất được đầu tư đồng bộ, kiên cố gồm các phòng học, phòng chức năng, khu hiệu bộ, thư viện,…. Hiệu quả đào tạo của nhà trường trong chu kỳ kiểm định đạt từ 91%, tỷ lệ hoàn thành chương trình bậc Tiểu học đạt 100%.</p>
+        <p>Trong các năm học, nhà trường luôn duy trì chất lượng chuyên môn cũng như phát triển các kỹ năng văn hóa, xã hội, phong trào văn nghệ, thể thao đối với học sinh, tạo điều kiện để các em được tham gia và phát triển toàn diện. Ngoài ra, hàng năm nhà trường triển khai công tác tự đánh giá, xác định mức độ đáp ứng mục tiêu giáo dục để có kế hoạch cải tiến nhằm nâng cao chất lượng các hoạt động giáo dục nhà trường.</p>
+        <p>Với những kết quả và các tiêu chí đạt được, Trường Tiểu học Hoàng Diệu vinh dự đón nhận bằng chuẩn quốc gia mức độ 1 và chứng nhận kiểm định chất lượng giáo dục cấp độ 2. Dịp này, nhà trường tặng quà tri ân đội ngũ ban giám hiệu và giáo viên qua các thời kỳ.</p>
+      </div>
+      <button class="read-more" onclick="toggleReadMore()">Đọc thêm ▼</button>
+    </section>
+
+    <!-- Thư viện ảnh sự kiện -->
+    <section id="gallery">
+      <h2>Thư Viện Ảnh: Lễ Công Nhận</h2>
+      <div class="gallery-container">
+        <img src="images/01.jpg" alt="Ông Tạ Hồng Quảng phát biểu">
+        <img src="images/02.jpg" alt="Cô giáo đọc diễn văn">
+        <img src="images/03.jpg" alt="Lãnh đạo trao bằng chứng nhận">
+        <img src="images/04.jpg" alt="Khung cảnh buổi lễ">
+        <img src="images/05.jpg" alt="Trao quà tri ân">
+        <img src="images/06.jpg" alt="Tiết mục văn nghệ">
+        <img src="images/07.jpg" alt="Màn múa quạt">
+        <img src="images/08.jpg" alt="Màn múa thiếu nhi">
+        <img src="images/09.jpg" alt="Tiết mục múa đội thiếu nhi">
+        <img src="images/10.jpg" alt="Tiết mục múa võ thiếu nhi">
+      </div>
+    </section>
+
+  </main>
+  <script>
+    // Slideshow
+    let slideIndex = 1; showSlides(slideIndex);
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("slide");
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slides[slideIndex - 1].style.display = "block";
+    }
+    setInterval(() => { plusSlides(1); }, 5000);
+
+    // Toggle Read More
+    function toggleReadMore() {
+      const more = document.querySelector('.more-content');
+      const btn = document.querySelector('.read-more');
+      if (more.style.display === 'block') {
+        more.style.display = 'none';
+        btn.textContent = 'Đọc thêm ▼';
+      } else {
+        more.style.display = 'block';
+        btn.textContent = 'Thu gọn ▲';
+      }
+    }
+  </script>
 </body>
 </html>
