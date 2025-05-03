@@ -1,1 +1,54 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Đăng nhập</h2>
+    <input type="text" id="username" placeholder="Tên đăng nhập" />
+    <input type="password" id="password" placeholder="Mật khẩu" />
+    <button onclick="login()">Đăng nhập</button>
+    <p class="error" id="error-msg"></p>
+  </div>
+
+  <script>
+    function login() {
+      const u = document.getElementById('username').value;
+      const p = document.getElementById('password').value;
+      if (u === 'admin' && p === '1234') {
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('error-msg').textContent = 'Sai tên đăng nhập hoặc mật khẩu!';
+      }
+    }
+  </script>
+</body>
+</html>
