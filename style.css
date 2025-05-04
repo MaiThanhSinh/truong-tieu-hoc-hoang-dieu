@@ -1,48 +1,24 @@
-body {
-  background-color: #f4f1ee;
-  font-family: Georgia, serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-header {
-  text-align: center;
-  background-color: #6b4c3b;
-  color: white;
-  padding: 20px;
-}
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #8c6f5a;
-  padding: 10px;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-.container, .bio-container {
-  max-width: 800px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto 20px auto;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-.bio-image {
-  max-width: 100%;
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto 20px auto;
 }
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #6b4c3b;
-  color: white;
-  font-size: 0.9rem;
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
