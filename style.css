@@ -1,56 +1,98 @@
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f4f9ff;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #333;
-}
-
-.container {
-  width: 90%;
-  max-width: 960px;
-  margin: 0 auto;
 }
 
 header {
-  background: #005bac;
+  background-color: #0b5394;
   color: white;
-  padding: 20px 0;
+  padding: 20px 10px;
   text-align: center;
+  position: relative;
+}
+
+header img {
+  height: 80px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+header p {
+  font-size: 16px;
+  margin: 4px 0 0;
 }
 
 nav {
-  background: #003e7e;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  background-color: #073763;
+  overflow: hidden;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
+  float: left;
   display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
 }
 
 nav a:hover {
-  background: #004e99;
+  background-color: #1c4587;
 }
 
-main {
-  padding: 20px 0;
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 30px auto;
 }
 
-footer {
-  background: #eee;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 0.9em;
+.slide {
+  display: none;
 }
 
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-.logo {
-  height: 60px;
-  vertical-align: middle;
-  margin-right: 12px;
+.fade {
+  animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
