@@ -1,39 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiểu sử Tổng đốc Hoàng Diệu</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trường Tiểu học Hoàng Diệu</title>
+  <link rel="stylesheet" href="slideshow/style.css">
+  <style>
+    body {
+      background-color: #e8f4fd;
+      font-family: Arial, sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    header img {
+      height: 90px;
+    }
+    .school-name {
+      font-size: 2rem;
+      margin: 10px 0 5px 0;
+      color: #004080;
+    }
+    .school-address {
+      font-size: 1rem;
+      color: #333;
+      font-style: italic;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      background-color: #004080;
+      padding: 12px 0;
+      margin-bottom: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+    }
+    footer {
+      background-color: #f9f9f9;
+      color: #555;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 20px 10px 10px 10px;
+    }
+    .slogan-chay {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      font-style: italic;
+      background: #f0f8ff;
+      color: #004080;
+      font-size: 1.1rem;
+      animation: chaySlogan 20s linear infinite;
+      margin-top: 10px;
+    }
+    @keyframes chaySlogan {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay">
-      <h1>TIỂU SỬ TỔNG ĐỐC HOÀNG DIỆU</h1>
-      <p>Người anh hùng quyết tử vì thành Hà Nội</p>
-    </div>
-  </header>
-  <main class="content">
+
+<header>
+  <img src="logo.png" alt="Logo Trường Hoàng Diệu" />
+  <h1 class="school-name">TRƯỜNG TIỂU HỌC HOÀNG DIỆU</h1>
+  <div class="school-address">📍 Thôn Bù Gia Phúc I, xã Phú Nghĩa, huyện Bù Gia Mập, tỉnh Bình Phước</div>
+</header>
+
+<nav>
+  <a href="index.html">Trang chủ</a>
+  <a href="gioi-thieu.html">Giới thiệu</a>
+  <a href="tin-tuc.html">Tin tức</a>
+  <a href="hoat-dong.html">Hoạt động</a>
+  <a href="tai-nguyen.html">Tài nguyên</a>
+  <a href="lien-he.html">Liên hệ</a>
+</nav>
+
+<div class="slideshow-container">
+  <div class="mySlides fade"><img src="slideshow/images/01.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/03.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/04.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/05.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/06.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/07.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/08.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/09.jpg" style="width:100%"></div>
+  <div class="mySlides fade"><img src="slideshow/images/10.jpg" style="width:100%"></div>
+
+</div>
+
+<div class="container">
+  <main>
     <section>
-      <h2>Chân dung và xuất thân</h2>
-      <p>Hoàng Diệu, tên thật Hoàng Kim Tích, tự Quang Viễn, hiệu Tỉnh Trai, sinh ngày 10 tháng 2 năm Mậu Tý (1829) tại làng Xuân Đài, Diên Phước, Quảng Nam. Xuất thân trong gia đình Nho giáo, ông sớm nổi tiếng học giỏi và đỗ đạt cao, từng bước đi lên trong quan trường.</p>
-    </section>
-    <section>
-      <h2>Vai trò Tổng đốc Hà Ninh</h2>
-      <p>Năm 1879-1882, Hoàng Diệu giữ chức Tổng đốc Hà Ninh, phụ trách Hà Nội và vùng phụ cận – vùng đất chiến lược quan trọng của Bắc Kỳ. Ông nổi tiếng thanh liêm, cứng cỏi và có ý chí bảo vệ đất nước.</p>
-    </section>
-    <section>
-      <h2>Trận tử thủ Hà Nội</h2>
-      <p>Ngày 25/4/1882, quân Pháp do đại tá Henri Rivière chỉ huy nổ súng tấn công thành Hà Nội. Bất chấp triều đình Huế chủ bại, Hoàng Diệu cùng các tướng sĩ quyết giữ thành, chiến đấu đến cùng. Khi thành thất thủ, ông tuẫn tiết tại Võ Miếu, để lại tấm gương bất khuất cho hậu thế.</p>
-    </section>
-    <section>
-      <h2>Tưởng niệm</h2>
-      <p>Nhân dân Hà Nội tôn vinh Hoàng Diệu cùng Nguyễn Tri Phương tại đền Trung Liệt, Đống Đa. Ngày nay, tên ông được đặt cho nhiều đường phố, trường học để ghi nhớ công lao giữ nước.</p>
+      <h2>Chào mừng đến với Trường Tiểu học Hoàng Diệu</h2>
+      <p>Chúng tôi hướng tới một môi trường học tập thân thiện, sáng tạo và hội nhập quốc tế, giúp học sinh phát triển toàn diện về tri thức và nhân cách.</p>
     </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Trường Tiểu học Hoàng Diệu. Thiết kế bởi Mèo Gỗ.</p>
-  </footer>
+</div>
+
+<footer>
+  <p>&copy; 2025 Trường Tiểu học Hoàng Diệu. Thiết kế bởi Mèo Gỗ.</p>
+  <div class="slogan-chay">
+    Học để biết – Học để làm – Học để cùng chung sống – Học để tự khẳng định mình
+  </div>
+</footer>
+
+<script src="slideshow/script.js"></script>
 </body>
 </html>
